@@ -6,13 +6,161 @@
     android:layout_height="match_parent"
     tools:context="com.iotwebplanet.learn.hostel.SplashActivity">
 
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageLogo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="315dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="281dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Developers"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TableLayout
+        android:id="@+id/creditTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credits"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:id="@+id/application_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Hostel Complaint Management System"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:text="V1.0"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/dev1row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin"
+            android:gravity="fill">
+
+            <TextView
+                android:id="@+id/dev1name"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:text="Nishkarsh"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/dev1id_num"
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:text="1234"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/dev2row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/dev2name"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:text="Rishi Yadav"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/dev2id_num"
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:text="123"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/dev3row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/dev3name"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:text="Akaash"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/dev3id_num"
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:text="123"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/collegeRow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_vertical_margin"
+            android:gravity="bottom|fill">
+
+            <TextView
+                android:id="@+id/collegename"
+                android:layout_width="231dp"
+                android:layout_height="match_parent"
+                android:text="BR Ambedkar"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/devClass"
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:text="Btech VII Sem"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
