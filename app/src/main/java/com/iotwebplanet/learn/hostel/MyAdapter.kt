@@ -56,7 +56,7 @@ class MyAdapter(val pList: ArrayList<Problems>) : RecyclerView.Adapter<MyAdapter
                      }
               }
 
-            itemView.textViewName.text=problem.name.toUpperCase()
+            itemView.textViewSName.text=problem.name.toUpperCase()
             itemView.textViewCom_id.text=problem.com_id.toUpperCase()
             itemView.textViewStatus.text= st;
 
@@ -67,6 +67,12 @@ class MyAdapter(val pList: ArrayList<Problems>) : RecyclerView.Adapter<MyAdapter
             itemView.setOnClickListener {
                 Toast.makeText(itemView.context, "Clicked on List " + Integer.toString(getAdapterPosition()), Toast.LENGTH_LONG).show();
                 val myActivity= Intent(itemView.context,Problem_actionActivity::class.java)
+                //setting value
+                myActivity.putExtra("id_num",problem.id_num)
+                myActivity.putExtra("name",problem.name)
+                myActivity.putExtra("com_id",problem.com_id)
+                myActivity.putExtra("status",st)
+
                 itemView.context.startActivity(myActivity)
 
             }

@@ -13,4 +13,6 @@ val problem_type:String,
 val description: String,
 val status: Int,
 val com_id: String,
-val created_on: String)
+val created_on: String,
+                    val msg: String
+                    )

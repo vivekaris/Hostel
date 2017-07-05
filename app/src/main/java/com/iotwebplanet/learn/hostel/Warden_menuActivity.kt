@@ -32,8 +32,6 @@ class Warden_menuActivity : AppCompatActivity() {
 
         var status:Warden_data
 
-
-
         Http.get {
             url=weburl.WARDEN_DATA
 

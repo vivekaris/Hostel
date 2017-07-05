@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="LightPink">#f8bbd0</color>
+    <color name="LightPurple">#e1bee7</color>
+    <color name="LightGreen">#b2dfdb</color>
+    <color name="Lightyellow">#ffff8d</color>
+    <color name="LightGreen2">#aed581</color>
 </resources>

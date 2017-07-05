@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Thanks for Using this APP", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
@@ -59,17 +59,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.addComplain -> {
+            R.id.nav_add-> {
                 val mainActivity= Intent(this@MainActivity,Add_complaintActivity::class.java)
                 startActivity(mainActivity)
             }
 
-            R.id.findComplaint -> {
+            R.id.nav_find-> {
 
-                val mainActivity= Intent(this@MainActivity,All_problemActivity::class.java)
+                val mainActivity= Intent(this@MainActivity,FinderActivity::class.java)
                 startActivity(mainActivity)
             }
-            R.id.wardenLogin -> {
+            R.id.nav_login -> {
                 val mainActivity= Intent(this@MainActivity,Wardenl_loginActivity::class.java)
                 startActivity(mainActivity)
             }
