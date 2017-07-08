@@ -5,14 +5,16 @@ package com.iotwebplanet.learn.hostel
  */
 
 class Webservices{
-    val SERVER="http://192.168.43.130/"
-    val ALL_COMPLAINT="http://www.iotwebplanet.com/playground/Hostel/all_problem.php"
-    val FINDER=SERVER+"Hostel/finder.php"
-    val ADD_COMPLAINT="http://www.iotwebplanet.com/playground/Hostel/add_problem.php"
-    //val ALL_COMPLAINT="http://192.168.1.5/Hostel/all_prob.php"
-    val LOGIN_CHECK="http://192.168.43.130/Hostel/login_check.php"
-    val WARDEN_DATA="http://192.168.1.5/Hostel/warden_menu.php"
-
+    //val SERVER="http://192.168.1.4/"
+    val SERVER="https://www.iotwebplanet.com/playground/"
+    val APP="Hostel/"
+    val ALL_COMPLAINT=SERVER+APP+"all_prob.php"
+    val FINDER=SERVER+APP+"finder.php"
+    val ADD_COMPLAINT=SERVER+APP+"add_problem.php"
+    val LOGIN_CHECK=SERVER+APP+"login_check.php"
+    val WARDEN_DATA=SERVER+APP+"warden_menu.php"
+    val STAT_DATA=SERVER+APP+"stat.php"
+    val ALL_HOSTEL=SERVER+APP+"all_hostel.php"
 
     fun statusChanger(status: Int):String{
 
