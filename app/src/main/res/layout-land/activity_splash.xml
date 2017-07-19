@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="315dp"
+        android:layout_width="199dp"
+        android:layout_height="167dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -43,6 +43,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,16 +59,16 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="214dp"
-                android:layout_height="match_parent"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
                 android:text="Hostel Complaint Management System"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/app_version"
-                android:layout_width="155dp"
-                android:layout_height="match_parent"
+                android:layout_width="41dp"
+                android:layout_height="wrap_content"
                 android:text="V1.0"
                 android:textAlignment="center"
                 android:textSize="14sp" />
@@ -123,7 +124,7 @@
 
             <TextView
                 android:id="@+id/dev3name"
-                android:layout_width="226dp"
+                android:layout_width="213dp"
                 android:layout_height="match_parent"
                 android:text="Akaash"
                 android:textSize="14sp"
@@ -146,7 +147,7 @@
 
             <TextView
                 android:id="@+id/collegename"
-                android:layout_width="214dp"
+                android:layout_width="231dp"
                 android:layout_height="match_parent"
                 android:text="BR Ambedkar"
                 android:textSize="14sp"
@@ -154,7 +155,7 @@
 
             <TextView
                 android:id="@+id/devClass"
-                android:layout_width="157dp"
+                android:layout_width="413dp"
                 android:layout_height="match_parent"
                 android:text="Btech VII Sem"
                 android:textSize="18sp"

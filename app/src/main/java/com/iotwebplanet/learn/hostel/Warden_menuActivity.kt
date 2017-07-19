@@ -17,15 +17,20 @@ class Warden_menuActivity : AppCompatActivity() {
         Http.init(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_warden_menu)
-        warden_data()
+
+        val hostel_name=intent.extras.getString("hostel_name")
+        warden_data(hostel_name)
+
         CardView1wardenMenu.setOnClickListener({
             val mainActivity= Intent(this,All_problemActivity::class.java)
+
+            mainActivity.putExtra("hostel_name",hostel_name)
             startActivity(mainActivity)
         })
 
     }
 
-    fun warden_data():Unit{
+    fun warden_data(hostel_name:String):Unit{
         val weburl = Webservices()
 
         val gson = Gson()
@@ -38,23 +43,22 @@ class Warden_menuActivity : AppCompatActivity() {
             val tag = "HTTP_LOG" //for debug
 
             params {
-                // "com_id"-com_id  //parameters
-                //"username"- username
-                //"password"-password
+                 "hostel_name"-hostel_name  //parameters
+
 
             }
 
             onStart {
-                Log.d(tag.toString(),"on start")
-                Toast.makeText(this@Warden_menuActivity, "Login Started..", Toast.LENGTH_SHORT).show();
+              //  Log.d(tag.toString(),"on start")
+                Toast.makeText(this@Warden_menuActivity, "Loading Data.."+hostel_name, Toast.LENGTH_SHORT).show();
 
             }
 
             onSuccess { bytes ->
                 //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
                 val text =bytes.toString(Charset.defaultCharset())
-                println(text)
-                Toast.makeText(this@Warden_menuActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
+               // println(text)
+               // Toast.makeText(this@Warden_menuActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
 
                 status = gson.fromJson<Warden_data>(text)
 
@@ -64,7 +68,7 @@ class Warden_menuActivity : AppCompatActivity() {
                 pending.text=status.pending
                 resolved.text=status.resolved
                 processing.text=status.processing
-
+                 this@Warden_menuActivity.title="Warden Menu :"+hostel_name
                 //now adding the adapter to recyclerview
 
 
@@ -80,7 +84,7 @@ class Warden_menuActivity : AppCompatActivity() {
             onFinish { Log.d(tag.toString(), "on finish")
 
 
-                Toast.makeText(this@Warden_menuActivity, "Finished", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this@Warden_menuActivity, "Finished", Toast.LENGTH_SHORT).show();
 
 
 

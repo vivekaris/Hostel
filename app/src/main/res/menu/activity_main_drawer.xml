@@ -6,20 +6,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_add"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@android:drawable/ic_input_add"
             android:title="Add Complaint" />
         <item
             android:id="@+id/nav_find"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@android:drawable/ic_menu_search"
             android:title="Find Status" />
         <item
             android:id="@+id/nav_login"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@android:drawable/ic_lock_lock"
             android:title="Warden Login" />
+
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_slogin"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Admin Login" />
+
     </group>
 
     <item android:title="Communicate">

@@ -1,13 +1,20 @@
 package com.iotwebplanet.learn.hostel
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.github.salomonbrys.kotson.fromJson
 import com.google.gson.Gson
 import com.ohmerhe.kolley.request.Http
 import kotlinx.android.synthetic.main.activity_add_complaint.*
 import java.nio.charset.Charset
+
+
+import android.widget.ArrayAdapter
+import com.ohmerhe.kolley.request.Http.get
+
 
 class Add_complaintActivity : AppCompatActivity() {
 
@@ -16,16 +23,17 @@ class Add_complaintActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_complaint)
 
 Http.init(this)
+        //calling
+hostel_data()
+send_problem.setOnClickListener({
 
-send_btn.setOnClickListener({
-
-    val id_num=textViewSid.text.toString()
-    val name=textViewSName.text.toString()
-    val mobile=textViewMobile.text.toString()
-    val hostel=textViewHostel.text.toString()
-    val room_number=textViewRoom.text.toString()
-    val problem_type=textViewProbType.text.toString()
-    val description=textViewdescription.text.toString()
+    val id_num=id_num.text.toString()
+    val name=student_name.text.toString()
+    val mobile= mobile_num.text.toString()
+    val hostel=hostel_name.selectedItem.toString()
+    val room_number=room_num.text.toString()
+    val problem_type= problemtype.text.toString()
+    val description=description.text.toString()
 
     //Toast.makeText(this@Add_complaintActivity, "Test .."+id_num+name+mobile+hostel+room_number+problem_type+description, Toast.LENGTH_LONG).show();
 
@@ -44,9 +52,10 @@ send_btn.setOnClickListener({
 
         val gson = Gson()
 
-        var problem:Problems;
+        var status=Action_status("0","0","-")
 
-        Http.get {
+
+        get {
             url=weburl.ADD_COMPLAINT
 
             val tag = "HTTP_LOG" //for debug
@@ -63,25 +72,102 @@ send_btn.setOnClickListener({
             }
 
             onStart {
-                Log.d(tag.toString(),"on start")
-                Toast.makeText(this@Add_complaintActivity, "Finder Started..", Toast.LENGTH_SHORT).show();
+             //   Log.d(tag.toString(),"on start")
+                Toast.makeText(this@Add_complaintActivity, "Connecting....", Toast.LENGTH_SHORT).show();
 
             }
 
             onSuccess { bytes ->
                 //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
                 val text =bytes.toString(Charset.defaultCharset())
-                println(text)
-                Toast.makeText(this@Add_complaintActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
+             //   println(text)
+              //  Toast.makeText(this@Add_complaintActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
 
-               // problem = gson.fromJson<Problems>(text)
-                //   hostels = gson.fromJson<List<Hostel>>(text) as ArrayList<Hostel>
+                status = gson.fromJson<Action_status>(text)
 
+            }
+
+            onFail { error ->
+                Log.d(tag.toString(),"on fail ${error.toString()}")
+                Toast.makeText(this@Add_complaintActivity, "E:"+error.toString(), Toast.LENGTH_LONG).show();
+
+            }
+
+            onFinish { Log.d(tag.toString(), "on finish")
+                Toast.makeText(this@Add_complaintActivity, "Finished"+status.msg, Toast.LENGTH_SHORT).show();
+                //now adding logic
+                when(status.msg)
+                {
+                    "Success"->{
+                        val resultActivity= Intent(this@Add_complaintActivity,ResultActivity::class.java)
+                        resultActivity.putExtra("com_id",status.com_id)
+                        startActivity(resultActivity)
+                    }
+                    else->{
+                        Toast.makeText(this@Add_complaintActivity,"Error in Input",Toast.LENGTH_SHORT).show();
+
+                    }
+
+                }
+
+
+            }
+
+        }
+    }
+
+    fun hostel_data():Unit{
+        val weburl = Webservices()
+
+        val gson = Gson()
+
+        var hostels= mutableListOf<Hostel_data>()
+
+        get {
+            url=weburl.ALL_HOSTEL
+
+            val tag = "HTTP_LOG" //for debug
+
+            params {
+                // "com_id"-com_id  //parameters
+
+
+            }
+
+            onStart {
+               // Log.d(tag.toString(),"on start")
+              //  Toast.makeText(this@Add_complaintActivity, "Call Started..", Toast.LENGTH_SHORT).show();
+
+            }
+
+            onSuccess { bytes ->
+                //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
+                val text =bytes.toString(Charset.defaultCharset())
+              //  println(text)
+             //   Toast.makeText(this@Add_complaintActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
+
+
+                hostels = gson.fromJson<MutableList<Hostel_data>>(text)
                 //creating our adapter  all data will be set
 
+                val s=hostels.size;   //size of collection
 
 
-                //now adding the adapter to recyclerview
+                val hs = ArrayList<String>()
+//printing saved data in pojo class
+                //printing list from loop
+                hs.add("Select Hostel")
+                for (i in 0..s-1) {
+                    hs.add(hostels.get(i).hostel_name)
+
+                }
+
+             // Apply the adapter to the spinner
+                val hint_adapter = ArrayAdapter(this@Add_complaintActivity,android.R.layout.simple_spinner_item,hs)
+                hint_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+               hostel_name.adapter=hint_adapter
+                // show hint
+                hostel_name.setSelection(0)
 
 
 
@@ -94,7 +180,11 @@ send_btn.setOnClickListener({
             }
 
             onFinish { Log.d(tag.toString(), "on finish")
+
+
                 Toast.makeText(this@Add_complaintActivity, "Finished", Toast.LENGTH_SHORT).show();
+
+
 
 
 

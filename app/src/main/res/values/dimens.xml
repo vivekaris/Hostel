@@ -7,6 +7,6 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="LayoutWidth368dp">368dp</dimen>
-    <dimen name="LayoutHeightWardenMenu">90dp</dimen>
+    <dimen name="LayoutHeightWardenMenu">140dp</dimen>
 
 </resources>

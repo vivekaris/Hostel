@@ -23,11 +23,13 @@ class All_problemActivity : AppCompatActivity() {
 
         Http.init(this) //call to web service
 
+        val hostel_name=intent.extras.getString("hostel_name")
+
         if (isNetworkAvailable()) {
 
             val t = Toast.makeText(this, "You are online!!!!", Toast.LENGTH_LONG).show()
             swipeRefreshLayout.setRefreshing(true)
-            myRefresh()
+            myRefresh(hostel_name)
         } else {
 
             val t = Toast.makeText(this, "You are not online!!!!", Toast.LENGTH_LONG).show()
@@ -40,7 +42,7 @@ class All_problemActivity : AppCompatActivity() {
             if (isNetworkAvailable()) {
 
                 val t = Toast.makeText(this, "You are online!!!!", Toast.LENGTH_LONG).show()
-                myRefresh()
+                myRefresh(hostel_name)
             } else {
 
                 val t = Toast.makeText(this, "You are not online!!!!", Toast.LENGTH_LONG).show()
@@ -54,7 +56,7 @@ class All_problemActivity : AppCompatActivity() {
 
     }
 
-    fun myRefresh():Unit{
+    fun myRefresh(hostel_name:String):Unit{
         val weburl = Webservices()
 
         val gson = Gson()
@@ -67,30 +69,25 @@ class All_problemActivity : AppCompatActivity() {
             val tag = "HTTP_LOG" //for debug
 
             params {
-                // "name"-"value"  //parameters
+                "hostel_name"-hostel_name  //parameters
 
             }
 
             onStart {
-                Log.d(tag.toString(),"on start")
-                Toast.makeText(this@All_problemActivity, "Starting...data..", Toast.LENGTH_LONG).show();
+             //   Log.d(tag.toString(),"on start")
+              //  Toast.makeText(this@All_problemActivity, "Starting...data..", Toast.LENGTH_LONG).show();
 
             }
 
             onSuccess { bytes ->
                 //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
                 val text =bytes.toString(Charset.defaultCharset())
-                println(text)
-                Toast.makeText(this@All_problemActivity, "Loading...data..", Toast.LENGTH_LONG).show();
+              //  println(text)
+              //  Toast.makeText(this@All_problemActivity, "Loading...data..", Toast.LENGTH_LONG).show();
 
                 problemList = gson.fromJson<ArrayList<Problems>>(text)
                 //   hostels = gson.fromJson<List<Hostel>>(text) as ArrayList<Hostel>
-
-
-
-
-
-                //creating our adapter  all data will be set
+ //creating our adapter  all data will be set
 
                 val madapter = MyAdapter(problemList)
 
@@ -101,13 +98,13 @@ class All_problemActivity : AppCompatActivity() {
             }
 
             onFail { error ->
-                Log.d(tag.toString(),"on fail ${error.toString()}")
-                Toast.makeText(this@All_problemActivity, "E:"+error.toString(), Toast.LENGTH_LONG).show();
+              //  Log.d(tag.toString(),"on fail ${error.toString()}")
+               Toast.makeText(this@All_problemActivity, "E:"+error.toString(), Toast.LENGTH_LONG).show();
 
             }
 
             onFinish { Log.d(tag.toString(), "on finish")
-                Toast.makeText(this@All_problemActivity, "Finished", Toast.LENGTH_LONG).show();
+               // Toast.makeText(this@All_problemActivity, "Finished", Toast.LENGTH_LONG).show();
                 // swipeRefreshLayout.setRefreshing(false)
 
             }

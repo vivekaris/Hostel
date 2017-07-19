@@ -1,12 +1,15 @@
 package com.iotwebplanet.learn.hostel
 
+import android.content.Context
+import android.net.ConnectivityManager
+
 /**
  * Created by developer on 02/07/17.
  */
 
 class Webservices{
-    //val SERVER="http://192.168.1.4/"
-    val SERVER="https://www.iotwebplanet.com/playground/"
+    val SERVER="http://192.168.1.4/"
+   // val SERVER="https://www.iotwebplanet.com/playground/"
     val APP="Hostel/"
     val ALL_COMPLAINT=SERVER+APP+"all_prob.php"
     val FINDER=SERVER+APP+"finder.php"
@@ -15,6 +18,7 @@ class Webservices{
     val WARDEN_DATA=SERVER+APP+"warden_menu.php"
     val STAT_DATA=SERVER+APP+"stat.php"
     val ALL_HOSTEL=SERVER+APP+"all_hostel.php"
+    val ADD_WARDEN=SERVER+APP+"add_warden.php"
 
     fun statusChanger(status: Int):String{
 
@@ -37,5 +41,7 @@ class Webservices{
         }
       return st
     }
+
+
 
 }

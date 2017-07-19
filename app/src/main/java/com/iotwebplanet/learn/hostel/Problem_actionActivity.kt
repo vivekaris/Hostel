@@ -15,9 +15,9 @@ class Problem_actionActivity : AppCompatActivity() {
         val st=intent.extras.getString("status");
 
         //set
-        textIdnumValue.text=id_num
-      textStatusValue.text=st
-        textNameValue.text=name
+        //textIdnumValue.text=id_num
+     // textStatusValue.text=st
+      //  textNameValue.text=name
 
 
     }

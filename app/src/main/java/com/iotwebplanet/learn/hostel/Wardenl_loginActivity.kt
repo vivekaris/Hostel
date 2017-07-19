@@ -21,8 +21,8 @@ class Wardenl_loginActivity : AppCompatActivity() {
         //val mainActivity= Intent(this,All_problemActivity::class.java)
         //startActivity(mainActivity)
 
-        button.setOnClickListener({
-            val username= com_id.text.toString()
+        tryagain.setOnClickListener({
+            val username= username.text.toString()
             val password=passWardenLogin.text.toString()
 
             //call
@@ -40,7 +40,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
 
         val gson = Gson()
 
-        var status=Action_status("0")
+        var status=Action_status("0","-","-")
 
 
 
@@ -57,16 +57,16 @@ class Wardenl_loginActivity : AppCompatActivity() {
             }
 
             onStart {
-                Log.d(tag.toString(),"on start")
-                Toast.makeText(this@Wardenl_loginActivity, "Login Started..", Toast.LENGTH_SHORT).show();
+               // Log.d(tag.toString(),"on start")
+                Toast.makeText(this@Wardenl_loginActivity, "Please wait..", Toast.LENGTH_SHORT).show();
 
             }
 
             onSuccess { bytes ->
                 //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
                 val text =bytes.toString(Charset.defaultCharset())
-                println(text)
-                Toast.makeText(this@Wardenl_loginActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
+                //println(text)
+                //Toast.makeText(this@Wardenl_loginActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
 
                 status = gson.fromJson<Action_status>(text)
 
@@ -81,7 +81,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
             }
 
             onFail { error ->
-                Log.d(tag.toString(),"on fail ${error.toString()}")
+               // Log.d(tag.toString(),"on fail ${error.toString()}")
                 Toast.makeText(this@Wardenl_loginActivity, "E:"+error.toString(), Toast.LENGTH_LONG).show();
 
             }
@@ -89,12 +89,14 @@ class Wardenl_loginActivity : AppCompatActivity() {
             onFinish { Log.d(tag.toString(), "on finish")
 
 
-                Toast.makeText(this@Wardenl_loginActivity, "Finished"+status.msg,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(this@Wardenl_loginActivity, "Finished"+status.msg,Toast.LENGTH_SHORT).show();
 
                 when(status.msg)
                 {
                     "Success"->{
                         val menuActivity= Intent(this@Wardenl_loginActivity,Warden_menuActivity::class.java)
+                        val hostel_name=status.hostel_name;
+                        menuActivity.putExtra("hostel_name",hostel_name)
                         startActivity(menuActivity)
                     }
                     else->{

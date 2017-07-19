@@ -16,12 +16,18 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>>
+        </activity>
+        >
         <activity
             android:name=".FinderActivity"
             android:label="Find Complain"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SuperActivity"
+            android:label="Super User "
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Complaint_viewActivity"
@@ -47,12 +53,14 @@
             android:name=".Add_complaintActivity"
             android:label="Add Complain"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".add_wardenActivity" />
+        <activity android:name=".No_internetActivity" />
+        <activity android:name=".WResultActivity"></activity>
     </application>
 
 </manifest>

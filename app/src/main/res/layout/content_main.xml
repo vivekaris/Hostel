@@ -8,4 +8,164 @@
     tools:context="com.iotwebplanet.learn.hostel.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView1wardenMenu"
+        android:layout_width="@dimen/LayoutWidth368dp"
+        android:layout_height="@dimen/LayoutHeightWardenMenu"
+        app:cardBackgroundColor="@color/LightGreen"
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="111dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CardView2WardenMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp">
+
+
+
+        <TextView
+            android:id="@+id/textView1CardView1WM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/totalcomplaints"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/cardview1textview2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView2WardenMenu"
+        android:layout_width="@dimen/LayoutWidth368dp"
+        android:layout_height="@dimen/LayoutHeightWardenMenu"
+        app:cardBackgroundColor="@color/LightPink"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardView1wardenMenu"
+        app:layout_constraintBottom_toTopOf="@+id/CardView3wardenMenu"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:id="@+id/textView1CardView2WM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/pending"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/cardview2textview2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView3wardenMenu"
+        android:layout_width="@dimen/LayoutWidth368dp"
+        android:layout_height="@dimen/LayoutHeightWardenMenu"
+        app:cardBackgroundColor="@color/Lightyellow"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="315dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardView2WardenMenu"
+        app:layout_constraintBottom_toTopOf="@+id/CardView4wardenMenu"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/textView1CardView3WM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/resolved"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resolved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/cardview3textview2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView4wardenMenu"
+        android:layout_width="@dimen/LayoutWidth368dp"
+        android:layout_height="@dimen/LayoutHeightWardenMenu"
+        app:cardBackgroundColor="@color/LightGreen2"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="413dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardView3wardenMenu"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:id="@+id/textView1CardView4WM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/processing"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/processing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/cardview4textview2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
 </android.support.constraint.ConstraintLayout>

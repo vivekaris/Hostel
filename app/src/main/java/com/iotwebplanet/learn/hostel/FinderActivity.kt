@@ -20,7 +20,7 @@ class FinderActivity : AppCompatActivity() {
 
 
         find.setOnClickListener({
-            val com_id=com_id.text.toString().toUpperCase()
+            val com_id= username.text.toString().toUpperCase()
             val moblie=mobile.text.toString()
             problem_finder(com_id,moblie)
         })
@@ -52,8 +52,8 @@ class FinderActivity : AppCompatActivity() {
             onSuccess { bytes ->
                 //  Log.d(tag.toString(),"on success ${bytes.toString(Charset.defaultCharset())}")
                 val text =bytes.toString(Charset.defaultCharset())
-                println(text)
-                Toast.makeText(this@FinderActivity, "Loading...data.."+text, Toast.LENGTH_SHORT).show();
+              //  println(text)
+                Toast.makeText(this@FinderActivity, "Finding...."+text, Toast.LENGTH_SHORT).show();
 
                 problem = gson.fromJson<Problems>(text)
                 //   hostels = gson.fromJson<List<Hostel>>(text) as ArrayList<Hostel>

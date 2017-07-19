@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#45ac57</color>
+    <color name="colorPrimaryDark">#9b9c9f</color>
+    <color name="colorAccent">#c11851</color>
 
 
     <color name="LightPink">#f8bbd0</color>
@@ -10,4 +10,7 @@
     <color name="LightGreen">#b2dfdb</color>
     <color name="Lightyellow">#ffff8d</color>
     <color name="LightGreen2">#aed581</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="SuccessGreen">#43a047</color>
 </resources>
