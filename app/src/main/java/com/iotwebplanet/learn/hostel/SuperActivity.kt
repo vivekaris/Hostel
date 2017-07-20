@@ -13,8 +13,8 @@ class SuperActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_super)
-        sButton.setOnClickListener({
-            val secret_psw=stext.text.toString()
+        signup.setOnClickListener({
+            val secret_psw=psw.text.toString()
             if(secret_psw=="superuser"){
 
 

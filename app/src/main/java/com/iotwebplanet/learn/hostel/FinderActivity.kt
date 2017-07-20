@@ -20,7 +20,7 @@ class FinderActivity : AppCompatActivity() {
 
 
         find.setOnClickListener({
-            val com_id= username.text.toString().toUpperCase()
+            val com_id= com_id.text.toString().toUpperCase()
             val moblie=mobile.text.toString()
             problem_finder(com_id,moblie)
         })

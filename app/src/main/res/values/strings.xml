@@ -1,63 +1,378 @@
 <resources>
-    <string name="app_name">Hostel</string>
-    <string name="title_activity_main">My Hostel</string>
+<string name="app_name">Myhostel</string>
+<string name="Logo">myhostellogo</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+<string name="app">CSA Hostel</string>
+<string name="title_activity_main">CSA Hostel</string>
 
-    <string name="action_settings">Settings</string>
 
-    <string name="title_activity_warden_login">Sign in</string>
+<string name="cardview1textview2">01</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-    <string name="Logo">myhostellogo</string>
-    <string name="totalcomplaints">Total Complaints</string>
-    <string name="cardview1textview2">0</string>
-    <string name="pending">Pending</string>
-    <string name="cardview2textview2">0</string>
-    <string name="resolved">Resolved</string>
-    <string name="cardview3textview2">0</string>
-    <string name="processing">Processing</string>
-    <string name="cardview4textview2">0</string>
-    <string name="enter_username_or_number">Enter Username or Number</string>
-    <string name="submit">SUBMIT</string>
-    <string name="welcome_wardens">WELCOME WARDENS</string>
-    <string name="welcome_students">WELCOME STUDENTS</string>
-    <string name="enter_password">Enter Password</string>
-    <string name="name">Name</string>
-    <string name="studentid">StudentID</string>
-    <string name="room_number">Room Number</string>
-    <string name="mobile">Mobile</string>
-    <string name="hostel_name">Hostel Name</string>
-    <string name="problem_type">Problem Type</string>
-    <string name="description">Description</string>
-    <string name="msg">Msg</string>
-    <string name="student_id">Student Id</string>
-    <string name="devnames">By :Rishi,Akaash and Nishkarsh</string>
-    <string name="title_activity_demo">DemoActivity</string>
-    <string name="title_activity_home">HomeActivity</string>
-    <string-array name="problem_array">
-        <item>Water Problem</item>
-        <item>Electricity Problem</item>
-        <item>Room Releted Problem</item>
-        <item>Cleaning Problem</item>
-        <item>Other</item>
-    </string-array>
+<string name="cardview2textview2">01</string>
 
-    <string name="title_activity_result">ResultActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="result_success_txt">Last Action Done Successfully</string>
-    <string name="complaint_result_text">Your Complain Registered Successfullly</string>
+<string name="cardview3textview2">01</string>
+
+<string name="cardview4textview2">01</string>
+<string name="pending">Pending</string>
+<string name="resolved">Resolved</string><string name="processing">Processing</string>
+
+
+<item name="CardView1wardenMenu" type="id">false</item>
+
+<item name="CardView2WardenMenu" type="id">false</item>
+
+<item name="CardView3wardenMenu" type="id">false</item>
+
+<item name="CardView4wardenMenu" type="id">false</item>
+
+<item name="ImageViewWardenMenu" type="id">false</item>
+
+<item name="action0" type="id">false</item>
+
+<item name="action_bar" type="id">false</item>
+
+<item name="action_bar_activity_content" type="id">false</item>
+
+<item name="action_bar_container" type="id">false</item>
+
+<item name="action_bar_root" type="id">false</item>
+
+<item name="action_bar_spinner" type="id">false</item>
+
+<item name="action_bar_subtitle" type="id">false</item>
+
+<item name="action_bar_title" type="id">false</item>
+
+<item name="action_container" type="id">false</item>
+
+<item name="action_context_bar" type="id">false</item>
+
+<item name="action_divider" type="id">false</item>
+
+<item name="action_image" type="id">false</item>
+
+<item name="action_menu_divider" type="id">false</item>
+
+<item name="action_menu_presenter" type="id">false</item>
+
+<item name="action_mode_bar" type="id">false</item>
+
+<item name="action_mode_bar_stub" type="id">false</item>
+
+<item name="action_mode_close_button" type="id">false</item>
+
+<item name="action_settings" type="id">false</item>
+
+<item name="action_text" type="id">false</item>
+
+<item name="actions" type="id">false</item>
+
+<item name="activity_chooser_view_content" type="id">false</item>
+
+<item name="alertTitle" type="id">false</item>
+
+<item name="backgroundI" type="id">false</item>
+
+<item name="button" type="id">false</item>
+
+<item name="buttonPanel" type="id">false</item>
+
+<item name="cancel_action" type="id">false</item>
+
+<item name="checkbox" type="id">false</item>
+
+<item name="chronometer" type="id">false</item>
+
+<item name="comIDres" type="id">false</item>
+
+<item name="com_id" type="id">false</item>
+
+<item name="container" type="id">false</item>
+
+<item name="contentPanel" type="id">false</item>
+
+<item name="coordinator" type="id">false</item>
+
+<item name="cstatus" type="id">false</item>
+
+<item name="custom" type="id">false</item>
+
+<item name="customPanel" type="id">false</item>
+
+<item name="decor_content_parent" type="id">false</item>
+
+<item name="default_activity_button" type="id">false</item>
+
+<item name="descriptionAc" type="id">false</item>
+
+<item name="design_bottom_sheet" type="id">false</item>
+
+<item name="design_menu_item_action_area" type="id">false</item>
+
+<item name="design_menu_item_action_area_stub" type="id">false</item>
+
+<item name="design_menu_item_text" type="id">false</item>
+
+<item name="design_navigation_view" type="id">false</item>
+<string name="totalcomplaints">Total Complaints</string>
+    <string name="welcome_students">Welcome</string>
+    <string name="action_settings">Setting</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <item name="drawer_layout" type="id">false</item>
+
+<item name="edit_query" type="id">false</item>
+
+<item name="emailSU" type="id">false</item>
+
+<item name="end_padder" type="id">false</item>
+
+<item name="expand_activities_button" type="id">false</item>
+
+<item name="expanded_menu" type="id">false</item>
+
+<item name="fab" type="id">false</item>
+
+<item name="find" type="id">false</item>
+
+<item name="home" type="id">false</item>
+
+<item name="homeBtn" type="id">false</item>
+
+<item name="hostelAc" type="id">false</item>
+
+<item name="hostelSU" type="id">false</item>
+
+<item name="icon" type="id">false</item>
+
+<item name="icon_group" type="id">false</item>
+
+<item name="image" type="id">false</item>
+
+<item name="imageView" type="id">false</item>
+
+<item name="imageView2" type="id">false</item>
+
+<item name="imageView3" type="id">false</item>
+
+<item name="imageViewWardenLogin" type="id">false</item>
+
+<item name="info" type="id">false</item>
+
+<item name="item_touch_helper_previous_elevation" type="id">false</item>
+
+<item name="largeLabel" type="id">false</item>
+
+<item name="line1" type="id">false</item>
+
+<item name="line3" type="id">false</item>
+
+<item name="list_item" type="id">false</item>
+
+<item name="masked" type="id">false</item>
+
+<item name="media_actions" type="id">false</item>
+
+<item name="mobile" type="id">false</item>
+
+<item name="mobileAc" type="id">false</item>
+
+<item name="mobileSU" type="id">false</item>
+
+<item name="nameAC" type="id">false</item>
+
+<item name="nameSU" type="id">false</item>
+
+<item name="nav_add" type="id">false</item>
+
+<item name="nav_find" type="id">false</item>
+
+<item name="nav_help" type="id">false</item>
+
+<item name="nav_login" type="id">false</item>
+
+<item name="nav_send" type="id">false</item>
+
+<item name="nav_share" type="id">false</item>
+
+<item name="nav_superUser" type="id">false</item>
+
+<item name="nav_view" type="id">false</item>
+
+<item name="navigation_header_container" type="id">false</item>
+
+<item name="notification_background" type="id">false</item>
+
+<item name="notification_main_column" type="id">false</item>
+
+<item name="notification_main_column_container" type="id">false</item>
+
+<item name="parentPanel" type="id">false</item>
+
+<item name="password1SU" type="id">false</item>
+
+<item name="password2SU" type="id">false</item>
+
+<item name="pending" type="id">false</item>
+
+<item name="problemTypeAC" type="id">false</item>
+
+<item name="processing" type="id">false</item>
+
+<item name="progress_circular" type="id">false</item>
+
+<item name="progress_horizontal" type="id">false</item>
+
+<item name="radio" type="id">false</item>
+
+<item name="recyclerViewAP" type="id">false</item>
+
+<item name="resolved" type="id">false</item>
+
+<item name="right_icon" type="id">false</item>
+
+<item name="right_side" type="id">false</item>
+
+<item name="roomAc" type="id">false</item>
+
+<item name="scrollIndicatorDown" type="id">false</item>
+
+<item name="scrollIndicatorUp" type="id">false</item>
+
+<item name="scrollView" type="id">false</item>
+
+<item name="search_badge" type="id">false</item>
+
+<item name="search_bar" type="id">false</item>
+
+<item name="search_button" type="id">false</item>
+
+<item name="search_close_btn" type="id">false</item>
+
+<item name="search_edit_frame" type="id">false</item>
+
+<item name="search_go_btn" type="id">false</item>
+
+<item name="search_mag_icon" type="id">false</item>
+
+<item name="search_plate" type="id">false</item>
+
+<item name="search_src_text" type="id">false</item>
+
+<item name="search_voice_btn" type="id">false</item>
+
+<item name="select_dialog_listview" type="id">false</item>
+
+<item name="shortcut" type="id">false</item>
+
+<item name="smallLabel" type="id">false</item>
+
+<item name="snackbar_action" type="id">false</item>
+
+<item name="snackbar_text" type="id">false</item>
+
+<item name="spacer" type="id">false</item>
+
+<item name="split_action_bar" type="id">false</item>
+
+<item name="st" type="id">false</item>
+
+<item name="status_bar_latest_event_content" type="id">false</item>
+
+<item name="studentIdAc" type="id">false</item>
+
+<item name="submenuarrow" type="id">false</item>
+
+<item name="submit_area" type="id">false</item>
+
+<item name="swipeRefreshLayout" type="id">false</item>
+
+<item name="text" type="id">false</item>
+
+<item name="text2" type="id">false</item>
+
+<item name="textIdnum" type="id">false</item>
+
+<item name="textIdnumValue" type="id">false</item>
+
+<item name="textName" type="id">false</item>
+
+<item name="textNameValue" type="id">false</item>
+
+<item name="textSpacerNoButtons" type="id">false</item>
+
+<item name="textSpacerNoTitle" type="id">false</item>
+
+<item name="textStatus" type="id">false</item>
+
+<item name="textStatusValue" type="id">false</item>
+
+<item name="textView" type="id">false</item>
+
+<item name="textView18" type="id">false</item>
+
+<item name="textView1CardView1WM" type="id">false</item>
+
+<item name="textView1CardView2WM" type="id">false</item>
+
+<item name="textView1CardView3WM" type="id">false</item>
+
+<item name="textView1CardView4WM" type="id">false</item>
+
+<item name="textView2" type="id">false</item>
+
+<item name="textView3" type="id">false</item>
+
+<item name="textView4" type="id">false</item>
+
+<item name="textView5" type="id">false</item>
+
+<item name="textViewCom_id" type="id">false</item>
+
+<item name="textViewSName" type="id">false</item>
+
+<item name="textViewStatus" type="id">false</item>
+
+<item name="text_input_password_toggle" type="id">false</item>
+
+<item name="textinput_counter" type="id">false</item>
+
+<item name="textinput_error" type="id">false</item>
+
+<item name="time" type="id">false</item>
+
+<item name="title" type="id">false</item>
+
+<item name="titleDividerNoCustom" type="id">false</item>
+
+<item name="title_template" type="id">false</item>
+
+<item name="toolbar" type="id">false</item>
+
+<item name="topPanel" type="id">false</item>
+
+<item name="total" type="id">false</item>
+
+<item name="touch_outside" type="id">false</item>
+
+<item name="transition_current_scene" type="id">false</item>
+
+<item name="transition_scene_layoutid_cache" type="id">false</item>
+
+<item name="up" type="id">false</item>
+
+<item name="usernameSU" type="id">false</item>
+
+<item name="view_offset_helper" type="id">false</item>
+
+<item name="visible" type="id">false</item>
+
+<item name="wLFindBtn" type="id">false</item>
+
+<item name="wLUsername" type="id">false</item>
+
+<item name="wLmobile" type="id">false</item>
+
+<item name="welcomeWardens" type="id">false</item>
 </resources>

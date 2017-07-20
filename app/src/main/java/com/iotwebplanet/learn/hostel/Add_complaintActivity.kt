@@ -27,13 +27,13 @@ Http.init(this)
 hostel_data()
 send_problem.setOnClickListener({
 
-    val id_num=id_num.text.toString()
-    val name=student_name.text.toString()
-    val mobile= mobile_num.text.toString()
-    val hostel=hostel_name.selectedItem.toString()
-    val room_number=room_num.text.toString()
-    val problem_type= problemtype.text.toString()
-    val description=description.text.toString()
+    val id_num=studentIdAc.text.toString()
+    val name=nameAc.text.toString()
+    val mobile= mobileAc.text.toString()
+    val hostel=hostelAc.selectedItem.toString()
+    val room_number=roomAc.text.toString()
+    val problem_type= problemTypeAc.text.toString()
+    val description=descriptionAc.text.toString()
 
     //Toast.makeText(this@Add_complaintActivity, "Test .."+id_num+name+mobile+hostel+room_number+problem_type+description, Toast.LENGTH_LONG).show();
 
@@ -165,9 +165,9 @@ send_problem.setOnClickListener({
              // Apply the adapter to the spinner
                 val hint_adapter = ArrayAdapter(this@Add_complaintActivity,android.R.layout.simple_spinner_item,hs)
                 hint_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-               hostel_name.adapter=hint_adapter
+               hostelAc.adapter=hint_adapter
                 // show hint
-                hostel_name.setSelection(0)
+                hostelAc.setSelection(0)
 
 
 
