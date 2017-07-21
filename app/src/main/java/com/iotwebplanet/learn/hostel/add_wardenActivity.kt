@@ -18,13 +18,14 @@ class add_wardenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_warden)
 Http.init(this)
-        send.setOnClickListener({
-            val name=name.text.toString()
-            val username=user_name.text.toString()
-            val password=password.text.toString()
-            val hostel=hostel_name.text.toString()
-            val mobile=mobile_num.text.toString()
-            val email= email.text.toString()
+        registerSu.setOnClickListener({
+            val name=nameSu.text.toString()
+            val username=usernameSu.text.toString()
+            val password=passwordSu.text.toString()
+            val password2=password2Su.text.toString()
+            val hostel=hostelSu.text.toString()
+            val mobile=mobileSu.text.toString()
+            val email= emailSu.text.toString()
 
 add_warden(name,username,password,hostel,mobile,email)
         })

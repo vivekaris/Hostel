@@ -72,7 +72,12 @@ class MyAdapter(val pList: ArrayList<Problems>) : RecyclerView.Adapter<MyAdapter
                 myActivity.putExtra("name",problem.name)
                 myActivity.putExtra("com_id",problem.com_id)
                 myActivity.putExtra("status",st)
-
+                myActivity.putExtra("hostel",problem.hostel)
+                myActivity.putExtra("problemtype",problem.problem_type)
+                myActivity.putExtra("roomnum",problem.room_number)
+                myActivity.putExtra("description",problem.description)
+                myActivity.putExtra("mobile",problem.mobile)
+                myActivity.putExtra("created",problem.created_on)
                 itemView.context.startActivity(myActivity)
 
             }
