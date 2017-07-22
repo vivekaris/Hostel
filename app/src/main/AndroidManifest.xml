@@ -58,7 +58,9 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".add_wardenActivity" />
+        <activity android:name=".add_wardenActivity"
+            android:label="Add Warden"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".No_internetActivity" />
         <activity android:name=".WResultActivity"></activity>
     </application>

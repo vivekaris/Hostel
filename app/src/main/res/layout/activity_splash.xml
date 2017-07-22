@@ -8,7 +8,7 @@
         android:id="@+id/backgroundId"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:background="#ffc8e6c9"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/image2" />
@@ -17,13 +17,8 @@
         android:id="@+id/imageView3"
         android:layout_width="150.0dip"
         android:layout_height="150.0dip"
-        android:layout_marginBottom="8.0dip"
-        android:layout_marginTop="30.0dip"
-        app:layout_constraintBottom_toTopOf="@id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/logo2" />
 
     <TextView
@@ -46,7 +41,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="172.0dip"
+        android:layout_marginBottom="160dp"
         android:text="Ver 1.0"
         android:textColor="#ffffffff"
         app:layout_constraintBottom_toTopOf="@id/textView4"
