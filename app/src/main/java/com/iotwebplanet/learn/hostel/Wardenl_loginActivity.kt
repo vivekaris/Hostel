@@ -22,7 +22,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
         //startActivity(mainActivity)
 
         tryagain.setOnClickListener({
-            val username= username.text.toString()
+            val username=username.text.toString()
             val password=passWardenLogin.text.toString()
 
             //call
@@ -51,7 +51,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
 
             params {
                 // "com_id"-com_id  //parameters
-                "username"- username
+                "username"-username
                 "password"-password
 
             }
@@ -72,7 +72,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
 
                 //creating our adapter  all data will be set
 
-
+                print(status.hostel_name)
 
                 //now adding the adapter to recyclerview
 
@@ -89,7 +89,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
             onFinish { Log.d(tag.toString(), "on finish")
 
 
-             //   Toast.makeText(this@Wardenl_loginActivity, "Finished"+status.msg,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(this@Wardenl_loginActivity, "Finished"+status.msg,Toast.LENGTH_SHORT).show();
 
                 when(status.msg)
                 {
@@ -98,6 +98,7 @@ class Wardenl_loginActivity : AppCompatActivity() {
                         val hostel_name=status.hostel_name;
                         menuActivity.putExtra("hostel_name",hostel_name)
                         startActivity(menuActivity)
+                       // Toast.makeText(this@Wardenl_loginActivity,"Success Login",Toast.LENGTH_SHORT).show();
                     }
                     else->{
                         Toast.makeText(this@Wardenl_loginActivity,"Error in Login",Toast.LENGTH_SHORT).show();

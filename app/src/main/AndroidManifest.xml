@@ -15,8 +15,57 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".FinderActivity"
+            android:label="Find Complain"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SuperActivity"
+            android:label="Super User "
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Complaint_viewActivity"
+            android:label="Complain View"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Wardenl_loginActivity"
+            android:label="Warden Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+
+        </activity>
+        <activity
+            android:name=".Warden_menuActivity"
+            android:label="Warden Menu"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".All_problemActivity"
+            android:label="All Complaints"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Problem_actionActivity"
+            android:label="Complain Action"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Add_complaintActivity"
+            android:label="Add Complain"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,60 +73,20 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".FinderActivity"
-            android:label="Find Complain"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".SuperActivity"
-            android:label="Super User "
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Complaint_viewActivity"
-            android:label="Complain View"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Wardenl_loginActivity"
-            android:label="Warden Login"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Warden_menuActivity"
-            android:label="Warden Menu"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".All_problemActivity"
-            android:label="All Complaints"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Problem_actionActivity"
-            android:label="Complain Action"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Add_complaintActivity"
-            android:label="Add Complain"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResultActivity"
-            android:screenOrientation="portrait"/>
+            android:name=".ResultActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".add_wardenActivity"
             android:label="Add Warden"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity android:name=".No_internetActivity" />
-        <activity android:name=".WResultActivity"></activity>
+        <activity android:name=".WResultActivity" />
+        <activity android:name=".About">
+
+        </activity>
     </application>
 
 </manifest>

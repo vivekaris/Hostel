@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "367903493957",
+    "firebase_url": "https://hostel-ce181.firebaseio.com",
+    "project_id": "hostel-ce181",
+    "storage_bucket": "hostel-ce181.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367903493957:android:795864ce5ea387ac",
+        "android_client_info": {
+          "package_name": "com.iotwebplanet.learn.hostel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367903493957-po5aakmbmquqbcv1mq6c48bgirt3qdk3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotwebplanet.learn.hostel",
+            "certificate_hash": "f233704914615c2937b044332dcc788692ccb4e0"
+          }
+        },
+        {
+          "client_id": "367903493957-qaddpu1t2dgdqdm5lcdr8cm7lqkvo0r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrGyEf6oBvkNTagscNcVUG-Kd7jPctkJA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367903493957-qaddpu1t2dgdqdm5lcdr8cm7lqkvo0r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

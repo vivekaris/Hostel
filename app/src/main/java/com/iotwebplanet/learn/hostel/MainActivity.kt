@@ -46,13 +46,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            // Log.v("Home", "############################You are not online!!!!")
         }
 
-
-
-
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+
+
+
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -107,6 +108,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_slogin -> {
                 val mainActivity = Intent(this@MainActivity, SuperActivity::class.java)
                 startActivity(mainActivity)
+            }
+            R.id.nav_about -> {
+                val about = Intent(this@MainActivity, About::class.java)
+                startActivity(about)
             }
             R.id.nav_share -> {
 

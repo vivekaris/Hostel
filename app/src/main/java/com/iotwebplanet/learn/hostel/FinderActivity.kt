@@ -21,8 +21,8 @@ class FinderActivity : AppCompatActivity() {
 
         find.setOnClickListener({
             val com_id= com_id.text.toString().toUpperCase()
-            val moblie=mobile.text.toString()
-            problem_finder(com_id,moblie)
+            val mobile=mobile.text.toString()
+            problem_finder(com_id,mobile)
         })
 
 
@@ -66,6 +66,10 @@ class FinderActivity : AppCompatActivity() {
                         val menuActivity= Intent(this@FinderActivity,Complaint_viewActivity::class.java)
                         menuActivity.putExtra("status",v)
                         startActivity(menuActivity)
+
+
+
+
                     }
                     else->{
                         Toast.makeText(this@FinderActivity,"Data not Found",Toast.LENGTH_SHORT).show();

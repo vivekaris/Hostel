@@ -50,7 +50,7 @@ class Warden_menuActivity : AppCompatActivity() {
 
             onStart {
               //  Log.d(tag.toString(),"on start")
-                Toast.makeText(this@Warden_menuActivity, "Loading Data.."+hostel_name, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this@Warden_menuActivity, "Loading Data..of "+hostel_name, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -64,10 +64,10 @@ class Warden_menuActivity : AppCompatActivity() {
 
                 //creating our adapter  all data will be set
 
-                total.text=status.total
-                pending.text=status.pending
-                resolved.text=status.resolved
-                processing.text=status.processing
+                total1.text=status.total
+                pending1.text=status.pending
+                resolved1.text=status.resolved
+                processing1.text=status.processing
                  this@Warden_menuActivity.title="Warden Menu :"+hostel_name
                 //now adding the adapter to recyclerview
 

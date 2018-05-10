@@ -34,7 +34,7 @@ class Problem_actionActivity : AppCompatActivity() {
         roomTextViewPView.text=roomnum
         statusTVPView.text=st
         descTextViewPView.text=description
-        //createdon.text=created
+        registrationPa.text=created
 
 
 

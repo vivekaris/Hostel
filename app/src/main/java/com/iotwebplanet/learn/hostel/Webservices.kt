@@ -8,8 +8,9 @@ import android.net.ConnectivityManager
  */
 
 class Webservices{
-   // val SERVER="http://192.168.1.4/"
-   val SERVER="https://www.iotwebplanet.com/playground/"
+   // Don't forget to enter current IP because of localhost
+
+    val SERVER="http://webaddress/"
     val APP="Hostel/"
     val ALL_COMPLAINT=SERVER+APP+"all_prob.php"
     val FINDER=SERVER+APP+"finder.php"

@@ -11,6 +11,7 @@
     <color name="Lightyellow">#ffff8d</color>
     <color name="LightGreen2">#aed581</color>
 
-    <color name="black_overlay">#66000000</color>
+    <color name="black_overlay">#66050000</color>
     <color name="SuccessGreen">#43a047</color>
+
 </resources>
