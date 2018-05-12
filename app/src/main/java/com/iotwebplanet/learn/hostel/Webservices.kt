@@ -10,7 +10,7 @@ import android.net.ConnectivityManager
 class Webservices{
    // Don't forget to enter current IP because of localhost
 
-    val SERVER="http://webaddress/"
+    val SERVER="address"
     val APP="Hostel/"
     val ALL_COMPLAINT=SERVER+APP+"all_prob.php"
     val FINDER=SERVER+APP+"finder.php"
@@ -20,6 +20,7 @@ class Webservices{
     val STAT_DATA=SERVER+APP+"stat.php"
     val ALL_HOSTEL=SERVER+APP+"all_hostel.php"
     val ADD_WARDEN=SERVER+APP+"add_warden.php"
+    val UPDATE_PROBLEM=SERVER+APP+"update_problems.php"
 
     fun statusChanger(status: Int):String{
 
