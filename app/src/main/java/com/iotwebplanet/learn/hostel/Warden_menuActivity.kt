@@ -21,10 +21,48 @@ class Warden_menuActivity : AppCompatActivity() {
         val hostel_name=intent.extras.getString("hostel_name")
         warden_data(hostel_name)
 
+        //total complaint
+
         CardView1wardenMenu.setOnClickListener({
             val mainActivity= Intent(this,All_problemActivity::class.java)
 
             mainActivity.putExtra("hostel_name",hostel_name)
+            mainActivity.putExtra("status","0")
+            val t=total1.text;
+            if(t!="0")
+            startActivity(mainActivity)
+        })
+
+        //pending
+
+        CardView2WardenMenu.setOnClickListener({
+            val mainActivity= Intent(this,All_problemActivity::class.java)
+
+            mainActivity.putExtra("hostel_name",hostel_name)
+            mainActivity.putExtra("status","1")
+            val t=total1.text;
+            if(t!="0")
+            startActivity(mainActivity)
+        })
+        //pending
+        CardView3wardenMenu.setOnClickListener({
+            val mainActivity= Intent(this,All_problemActivity::class.java)
+
+            mainActivity.putExtra("hostel_name",hostel_name)
+            mainActivity.putExtra("status","2")
+            val t=total1.text;
+            if(t!="0")
+            startActivity(mainActivity)
+        })
+
+        //pending
+        CardView4wardenMenu.setOnClickListener({
+            val mainActivity= Intent(this,All_problemActivity::class.java)
+
+            mainActivity.putExtra("hostel_name",hostel_name)
+            mainActivity.putExtra("status","3")
+            val t=total1.text;
+            if(t!="0")
             startActivity(mainActivity)
         })
 
@@ -94,5 +132,7 @@ class Warden_menuActivity : AppCompatActivity() {
 
         }
     }
+
+
 
 }

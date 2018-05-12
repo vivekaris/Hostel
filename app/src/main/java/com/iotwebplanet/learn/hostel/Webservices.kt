@@ -10,9 +10,10 @@ import android.net.ConnectivityManager
 class Webservices{
    // Don't forget to enter current IP because of localhost
 
-    val SERVER="address"
+    val SERVER="http://xx/"
     val APP="Hostel/"
     val ALL_COMPLAINT=SERVER+APP+"all_prob.php"
+    val ALL_COMPLAINT_STATUS=SERVER+APP+"all_prob_status.php"
     val FINDER=SERVER+APP+"finder.php"
     val ADD_COMPLAINT=SERVER+APP+"add_problem.php"
     val LOGIN_CHECK=SERVER+APP+"login_check.php"
